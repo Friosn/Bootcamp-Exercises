@@ -54,4 +54,16 @@ for (let node of removeNodes) {
 
 //2.8----------------------
 
-const inserting = document.querySelectorAll("div");
+const inserting = document.querySelector(".newClass");
+
+inserting.insertAdjacentHTML("afterend", `<p>Voy en medio!</p>`);
+
+//2.9----------------------
+
+const goInside = document.querySelectorAll("[class= fn-insert-here]");
+
+for (let element of goInside) {
+  const parraf = document.createElement("p");
+  parraf.textContent = `Voy dentro!`;
+  element.appendChild(parraf);
+}
