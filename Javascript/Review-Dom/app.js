@@ -16,3 +16,18 @@ document.body.appendChild(uList);
 let ubicarionToRemove = document.querySelector(".fn-remove-me");
 
 ubicarionToRemove.remove();
+
+//1.3 --------------------
+
+const cars = ["Mazda 6", "Ford fiesta", "Audi A4", "Toyota corola"];
+let ulNew = document.createElement("ul");
+
+const ubicationFunc = document.querySelector('[data-function="printHere"]');
+
+for (const car of cars) {
+  let liNew = document.createElement("li");
+  liNew.innerHTML = car;
+  ulNew.appendChild(liNew);
+}
+
+ubicationFunc.appendChild(ulNew);
