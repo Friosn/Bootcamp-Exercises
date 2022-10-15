@@ -1,12 +1,10 @@
 //1.1 -----------
-
-const addBtnLikeABoss = document.querySelector("#btnToClick");
+const selectingSpace = document.querySelector(".click");
+const addBtnLikeABoss = document.querySelector("#btnToClick"); //I could have added the button from here with a .createElement("button"), ut I think that wasn't the thing  asked in the exercise.
 addBtnLikeABoss.textContent = "I am a button";
 
-addBtnLikeABoss.addEventListener("click", () => {
-  console.log(
-    "I don't know what information do I have to print here, but here I come :)"
-  );
+addBtnLikeABoss.addEventListener("click", (value) => {
+  console.log(selectingSpace.value);
 });
 
 //1.2---------------------
