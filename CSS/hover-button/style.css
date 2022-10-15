@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+
+}
+
+button {
+    background-color: rgba(45, 45, 247, 0.909);
+    height: 3.5rem;
+    width: 10rem;
+    border: transparent;
+    border-radius: 10%;
+    color: aliceblue;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+button:hover {
+    background-color: rgba(45, 45, 247, 0.909);
+    transform: scale(1.2);
+}
+
+
+
+
+
