@@ -31,3 +31,25 @@ for (const car of cars) {
 }
 
 ubicationFunc.appendChild(ulNew);
+
+//1.4-------------------------
+
+const countries2 = [
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=1" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=2" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=3" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=4" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=5" },
+];
+
+createDivs = document.createElement("div");
+
+for (const country2 of countries2) {
+  let titleH4 = document.createElement("h4");
+  let imgElement = document.createElement("img");
+  titleH4.innerHTML = country2.title;
+  imgElement.innerHTML = country2.imgUrl;
+  createDivs.appendChild(titleH4, imgElement);
+}
+
+document.body.appendChild(createDivs);
