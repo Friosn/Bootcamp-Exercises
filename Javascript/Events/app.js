@@ -17,9 +17,10 @@ addingAnother.addEventListener("focus", (value) => {
   console.log(value.target.value);
 });
 
-/* 
-const handleFocus = (evt) => console.log(evt.target.value);
-let input = document.querySelector('input[class="focus"]');
+//1.3 --------------------------
 
-input.addEventListener("focus", handleFocus);
- */
+const addingInput = document.querySelector(".value");
+
+addingInput.addEventListener("input", (value) => {
+  console.log(value.target.value);
+});
