@@ -43,13 +43,28 @@ const countries2 = [
 ];
 
 createDivs = document.createElement("div");
+createDivs.addClas;
 
 for (const country2 of countries2) {
-  let titleH4 = document.createElement("h4");
-  let imgElement = document.createElement("img");
-  titleH4.innerHTML = country2.title;
-  imgElement.innerHTML = country2.imgUrl;
-  createDivs.appendChild(titleH4, imgElement);
+  createDivs.innerHTML += `<h4>${country2.title}</h4>
+  <img class="deleteMeNext" src="${country2.imgUrl}">
+  `;
 }
-
 document.body.appendChild(createDivs);
+
+//1.5 --------------------
+
+classForDeleting = document.querySelector(".deleteMeNext");
+createBtn = document.createElement("button");
+createBtn.innerHTML = `DELETING LAST ELEMENT`;
+document.body.appendChild(createBtn);
+
+createBtn.addEventListener("click", (event) => {
+  const lastElement = document.querySelector(`.deleteMeNext`);
+  const lastElementPosition = countries2[countries2.length - 1].lastElement;
+  countries2.splice([countries2.length - 1]);
+  lastElement.parentElement.remove();
+}); //FALTA ACABARLO/bloqueo :(())cd ..
+
+
+//1.6 ------------------
