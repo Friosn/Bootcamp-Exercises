@@ -94,3 +94,50 @@ const colors = ["rojo", "azul", "amarillo", "verde", "naranja"];
 const colorsBut2 = [...colors];
 colorsBut2.splice(2, 1);
 console.log(colorsBut2);
+
+//Iteration#4---------------
+//4.1-----------
+const users = [
+  { id: 1, name: "Abel" },
+  { id: 2, name: "Julia" },
+  { id: 3, name: "Pedro" },
+  { id: 4, name: "Amanda" },
+];
+
+const nameMap = users.map((user) => user.name);
+console.log(nameMap);
+
+//4.2----------------
+const users2 = [
+  { id: 1, name: "Abel" },
+  { id: 2, name: "Julia" },
+  { id: 3, name: "Pedro" },
+  { id: 4, name: "Amanda" },
+];
+
+const nameMap2 = users2.map((user2) => {
+  if (user2.name[0] == "A") {
+    user2.name = "Anacleto";
+  }
+  return user2.name;
+});
+console.log(nameMap2);
+//Algo no me cuadra.
+
+//4.3---------------
+
+const cities = [
+  { isVisited: true, name: "Tokyo" },
+  { isVisited: false, name: "Madagascar" },
+  { isVisited: true, name: "Amsterdam" },
+  { isVisited: false, name: "Seul" },
+];
+
+const visitedPlaces = cities.map((city) => {
+  if (city.isVisited) {
+    return `${city.name} Visitado`;
+  }
+  return city.name;
+});
+
+console.log(visitedPlaces);
