@@ -59,3 +59,38 @@ const carItvYea2 = car.itv[1];
 const carItvYea3 = car.itv[2];
 
 console.log(carName, carItv, carItvYea1, carItvYea2, carItvYea3);
+
+//Iteration#3------------------
+//3.1----------
+const pointsList = [32, 54, 21, 64, 75, 43];
+
+let pointsListCopy = [...pointsList];
+console.log(pointsListCopy);
+
+//3.2---------------
+const toy = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
+
+let toyCopy = { ...toy };
+console.log(toyCopy);
+
+//3.3----------------
+const pointsList2 = [32, 54, 21, 64, 75, 43];
+const pointsLis2 = [54, 87, 99, 65, 32];
+
+const pointListMixx = [...pointsLis2, ...pointsList2];
+console.log(pointListMixx);
+
+//3.4------------
+const toy2 = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
+const toyUpdate = { lights: "rgb", power: ["Volar like a dragon", "MoonWalk"] };
+
+const toyMixx = { ...toy2, ...toyUpdate };
+console.log(toyMixx);
+
+//3.5-----------------
+
+const colors = ["rojo", "azul", "amarillo", "verde", "naranja"];
+
+const colorsBut2 = [...colors];
+colorsBut2.splice(2, 1);
+console.log(colorsBut2);
