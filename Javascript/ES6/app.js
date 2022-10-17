@@ -122,7 +122,6 @@ const nameMap2 = users2.map((user2) => {
   return user2.name;
 });
 console.log(nameMap2);
-//Algo no me cuadra.
 
 //4.3---------------
 
@@ -141,3 +140,67 @@ const visitedPlaces = cities.map((city) => {
 });
 
 console.log(visitedPlaces);
+
+//Iteration#5----------------- Filter
+
+//5.1-----------
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+const offAge = ages.filter((age) => {
+  return age > 18;
+});
+
+console.log(offAge);
+//5.2--------------
+const ages2 = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+const pairAge = ages2.filter((age2) => {
+  if (age2 % 2 === 0) {
+    return age2;
+  }
+});
+console.log(pairAge);
+
+//5.3-----------------
+const streamers = [
+  { name: "Rubius", age: 32, gameMorePlayed: "Minecraft" },
+  { name: "Ibai", age: 25, gameMorePlayed: "League of Legends" },
+  { name: "Reven", age: 43, gameMorePlayed: "League of Legends" },
+  { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
+];
+
+const leagueOf = streamers.filter((streamer) => {
+  if (streamer.gameMorePlayed == "League of Legends") {
+    return streamer;
+  }
+});
+console.log(leagueOf);
+
+//5.4-----------------
+
+const streamers2 = [
+  { name: "Rubius", age: 32, gameMorePlayed: "Minecraft" },
+  { name: "Ibai", age: 25, gameMorePlayed: "League of Legends" },
+  { name: "Reven", age: 43, gameMorePlayed: "League of Legends" },
+  { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
+];
+
+const namesWithU = streamers2.filter((streamer2) => {
+  if (streamer2.name.includes("u")) {
+    return streamer2;
+  }
+});
+console.log(namesWithU);
+
+//5.5------------------
+
+const legends = streamers2.filter((streamer2) => {
+  if (streamer2.gameMorePlayed.includes("League")) {
+    return streamer2;
+  }
+});
+
+if (legends.age > 35) {
+  return legends.gameMorePlayed.toUpperCase();
+}
+console.log(legends);
