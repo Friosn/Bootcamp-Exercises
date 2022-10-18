@@ -11,20 +11,20 @@
 };
 
 runTimeOut(); */
-
+//SOMETHING DOES NOT MAKE SENSE........
 const runTimeOut = async () => {
   try {
-    const promise = await setTimeout();
-  } catch (error) {}
-  const promise = new Promise((resolve) => {
-    setTimeout(function () {
+    const promise = await setTimeout(function () {
       resolve();
     }, 2000);
-  });
-
-  promise.then(() => {
     console.log("Time out!");
-  });
+  } catch (error) {
+    console.log("Error, human on the scene!");
+  }
 };
 
-runTimeOut();
+await runTimeOut();
+
+const getAgify = async () => {
+  const data = await fetch();
+};

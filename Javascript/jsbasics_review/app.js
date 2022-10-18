@@ -35,6 +35,18 @@ const removeCopies = movieCategories.filter((copies, indez) => {
 });
 console.log(removeCopies);
 
+/// Other way of doing the same, shorter --->
+let categor = [];
+
+for (const movie of movies) {
+  for (const category of movie.categories) {
+    if (!categor.includes(category)) {
+      categor.push(category);
+    }
+  }
+}
+console.log(categor);
+
 /* **Iteración #2: Mix Fors**
 
 Dado el siguiente javascript usa forof y forin para hacer la media del volumen de todos los sonidos favoritos que tienen los usuarios. */
@@ -158,3 +170,78 @@ const users2 = [
     },
   },
 ];
+
+/* let countSounds = [];
+
+for (const user2 of users2) {
+  const sounds = user2.favoritesSounds;
+//////////////////////////////////////////////
+  const repeatCounter = (sounds) => {
+    sounds.forEach((sound) => {
+      countSounds[sound] = countSounds[sound] + 1 || 1;
+    });
+    return countSounds;
+  };
+}
+repeatCounter(users2); */
+
+const repeatedSounds = {};
+
+for (const user2 of users2) {
+  for (const key in user2) {
+    if (key === "favoritesSounds") {
+      for (const sound in users2[users2.indexOf(user2)].favoritesSounds) {
+        if (Object.keys(repeatedSounds).includes(sound)) {
+          repeatedSounds[sound] += 1;
+        } else {
+          repeatedSounds[sound] = 1;
+        }
+      }
+    }
+  }
+}
+
+console.log(repeatedSounds);
+
+/////// I got help for this one, it wouldn't have occur to me like that, but it is understandable
+
+//Iteration #4-------------
+const bugs = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+
+const findArrayIndex = (array, text) => {
+  for (const element of array) {
+    if (element === text) {
+      return array.indexOf(element);
+    }
+  }
+};
+console.log(findArrayIndex(bugs, "Mosquito"));
+console.log(findArrayIndex(bugs, "Salamandra"));
+console.log(findArrayIndex(bugs, "Caracol"));
+
+//Iteration #5---------
+
+const rollDice = (sides) => {
+  return Math.floor(Math.random() * sides);
+};
+
+console.log(rollDice(0));
+
+//Iteration#6----------
+
+const cosas = [
+  "Mesirve",
+  "Cristiano Romualdo",
+  "Fernando Muralla",
+  "Ronalguiño",
+];
+
+const swap = (arr, text1, text2) => {
+  let coso = arr[text1];
+  let coso2 = arr[text2];
+
+  arr.splice(coso, 1, coso2);
+  return arr;
+};
+
+console.log(swap(cosas, 0, 3));

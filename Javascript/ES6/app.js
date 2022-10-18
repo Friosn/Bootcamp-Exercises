@@ -199,8 +199,13 @@ const legends = streamers2.filter((streamer2) => {
     return streamer2;
   }
 });
-
-if (legends.age > 35) {
-  return legends.gameMorePlayed.toUpperCase();
-}
+const mayus = legends.map((legend) => ({
+  ...legend,
+  gameMorePlayed:
+    legend.age > 35
+      ? legend.gameMorePlayed.toLocaleUpperCase()
+      : legend.gameMorePlayed,
+}));
 console.log(legends);
+
+//better solution than the one I had with overengeniering

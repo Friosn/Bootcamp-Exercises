@@ -128,7 +128,7 @@ const toyStorys = [
 ];
 
 for (const toyStory of toyStorys) {
-  if (toyStory.sellCount >= 15) {
+  if (toyStory.sellCount > 15) {
     popularToys.push(toyStory);
   }
 }

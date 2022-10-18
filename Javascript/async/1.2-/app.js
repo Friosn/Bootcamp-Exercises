@@ -18,3 +18,11 @@ const getEvent = getBtn.addEventListener("click", () => {
 });
 
 //something strange is unresolved
+
+const getNationalize = async (value) => {
+  const tada = await fetch(`https://api.nationalize.io/?name=${value}`);
+  const jsonData = await tada.json();
+  printElements(jsonData);
+};
+
+getBtn.addEventListener("click", () => getNationalize(getInput.vallue));
