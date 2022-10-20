@@ -24,7 +24,3 @@ const runTimeOut = async () => {
 };
 
 await runTimeOut();
-
-const getAgify = async () => {
-  const data = await fetch();
-};

@@ -2,7 +2,7 @@ const baseUrl = "https://api.nationalize.io";
 
 const getData = async (name) => {
   try {
-    const rawInfo = await fetch(`${baseUrl}${name}`);
+    const rawInfo = await fetch(`${baseUrl}/?name=${name}`);
     const toJson = await rawInfo.json();
     return toJson;
   } catch {
@@ -17,7 +17,7 @@ const getEvent = getBtn.addEventListener("click", () => {
   getData(getInput.value);
 });
 
-//something strange is unresolved
+//...........
 
 const getNationalize = async (value) => {
   const tada = await fetch(`https://api.nationalize.io/?name=${value}`);
