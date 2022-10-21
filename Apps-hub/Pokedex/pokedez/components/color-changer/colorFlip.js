@@ -6,3 +6,13 @@ export const randomColor = () => {
   let newColor = `rgb(${x},${y},${z})`;
   document.body.style.background = newColor;
 };
+
+////////////////
+
+//MUCHO MÁS LIMPIO
+
+const getColor = () => randomRGB();
+
+const getNumber = () => `${Math.floor(Math.random() * 256)}`;
+
+const randomRGB = () => `rgb (${getNumber()},${getNumber()},${getNumber()})`;

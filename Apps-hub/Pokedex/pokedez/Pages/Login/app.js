@@ -1,4 +1,5 @@
 import { hubSite } from "../HubMenu/app";
+import { randomColor } from "../../components/color-changer/colorFlip";
 
 export const initLoginPage = () => {
   document.querySelector("#app").innerHTML = `
@@ -17,6 +18,10 @@ const limit = (value) => {
   console.log(value);
   //Super useful the .match(/^[A-Za-z]+$/) <-----------
   if (value.match(/^[A-Za-z]+$/) && value.length > 3) {
+    window.localStorage.setItem(
+      "name",
+      JSON.stringify(document.querySelector("#identificator").value)
+    );
     hubSite();
   } else {
     alert("You gotta write a real name, or at least kinda real");
