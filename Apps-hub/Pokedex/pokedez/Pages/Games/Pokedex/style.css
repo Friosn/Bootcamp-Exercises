@@ -13,7 +13,7 @@ p {
     flex-wrap: wrap;
 }
 
-header > div {
+.pokeHeader > div {
   display: flex;
   flex-wrap: wrap ;
   align-items: center;
@@ -22,88 +22,96 @@ header > div {
     margin: 20px;
     padding: 20px;
     background-color: #6f8fafa6;
+   
 }
-header{
+.pokeHeader {
   display: flex;
   justify-content: center;
   height: 27.5rem;
  align-items: flex-end;
   background-image: url(http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/548f2eab06f447e.png);
- flex-wrap: wrap;
- border-radius: 40%;
+  flex-wrap: wrap;
+  border-top-right-radius: 40%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
 }
 
-header > img {
+
+.pokeHeader > img {
+ 
   justify-content:initial;
   display: flex;
-  background-color: black;
-  margin: 20px;
+  background-color: rgba(182, 35, 35, 0.119);
+
   flex-wrap: wrap;
   align-items:center;
   border-radius: 50%;
 }
 
-input {
+.pokeHeader > input {
   height: 1.5rem;
   width: 13rem;
+  border: 2px solid black;
   
 }
 
-input::placeholder{
-  content: "search pokemon";
-  font-size: 3rem;
-  text-transform: uppercase;
- font-weight: bolder black ;
-}
-
 .pokeCard {
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
+    align-content: space-around;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 2.4rem;
     width: 14rem;
     height: 22rem;
-
+    text-align: center;
 }
-
+.pokeCard {
+  width: 14rem;
+  height: 22rem;
+  background: rgb(104, 104, 103);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  text-transform: capitalize;
+  
+}
 .pokeCard > img {
     justify-content: center;
    text-align: center;
    margin: 10px 50px;
-   display: flex;
+   display: block;
 }
 
+ input::placeholder {
+  justify-content: center;
+  text-align: center;
+ }
 
 
 .myInput {
     text-align: end;
 }
 
-.pokeCard {
-    width: 13.7rem;
-    height: 22rem;
-    background: rgb(224, 31, 31);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    text-transform: capitalize;
-  }
+
 
   .pokeCard > h2{
     background-color: rgba(0, 0, 0, 0.144);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-
+    font-size: large;
+    padding: 4px;
+    font-weight: bold;
+   
   }
   
   .pokeCard:hover {
-    width: 14rem;
+    width: 14.4rem;
     height: 22.3rem;
     background: rgb(255, 255, 255);
     border: 2px solid rgb(200, 200, 200);
     border-radius: 20px;
-    background-color: #dfdfdf;
+    background-color: #5dbde6;
     transition: all .5s ease-in-out;
   }
   .pokeCard:hover::after{

@@ -8,6 +8,37 @@ export const initPokedex = () => {
   console.log("entr");
   clean();
   getData();
+  const getHeader = document.querySelector("header");
+  getHeader.classList.add("pokeHeader");
+
+  const insertIMG = document.createElement("img");
+  insertIMG.src = "https://avatars.githubusercontent.com/u/64151210?v=4";
+  getHeader.appendChild(insertIMG);
+  const divForInput = document.createElement("div");
+  getHeader.appendChild(divForInput);
+
+  const searcherInput = document.createElement("input");
+  searcherInput.classList.add(".myInput");
+  searcherInput.setAttribute("placeholder", "SEARCH POKEMON");
+  divForInput.appendChild(searcherInput);
+
+  const printPokemon = (word) => {
+    const filteredPokemons = pokeMapArray.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(word.toLowerCase())
+    );
+    const mainApp = document.querySelector("#app");
+    console.log(filteredPokemons);
+    mainApp.innerHTML = ``;
+    filteredPokemons.forEach((pokemon) => {
+      console.log(pokemon);
+      mainApp.innerHTML += pokeCard(pokemon);
+    });
+  };
+
+  searcherInput.addEventListener("input", (ev) => {
+    printPokemon(ev.target.value);
+    console.log(ev.target);
+  });
 };
 let pokeArray = [];
 let pokeMapArray = [];
@@ -54,38 +85,7 @@ const printPokeTemplate = (pokeArray) => {
 
 //----------SEARCHER ---------
 
-const getHeader = document.querySelector("header");
-const insertIMG = document.createElement("img");
-insertIMG.src = "https://avatars.githubusercontent.com/u/64151210?v=4";
-insertIMG.placeholder = "";
-getHeader.appendChild(insertIMG);
-const divForInput = document.createElement("div");
-getHeader.appendChild(divForInput);
-const searcherInput = document.createElement("input");
-searcherInput.classList.add(".myInput");
-divForInput.appendChild(searcherInput);
-
-const printPokemon = (word) => {
-  const filteredPokemons = pokeMapArray.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(word.toLowerCase())
-  );
-  const mainApp = document.querySelector("#app");
-  console.log(filteredPokemons);
-  mainApp.innerHTML = ``;
-  filteredPokemons.forEach((pokemon) => {
-    console.log(pokemon);
-    mainApp.innerHTML += pokeCard(pokemon);
-  });
-};
-
-searcherInput.addEventListener("input", (ev) => {
-  printPokemon(ev.target.value);
-  console.log(ev.target);
-});
-
 ///
-
-document.getElementsByClassName("myInfut").placeholder = "Search pokemon";
 
 const pokeType = () => {
   if (pokemon) {
