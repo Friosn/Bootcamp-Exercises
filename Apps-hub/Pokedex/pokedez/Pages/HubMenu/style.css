@@ -3,6 +3,34 @@ button {
     height: 2rem;
 }
 
+.wakaBtn {
+    margin-top: 8rem;
+    margin-left: 5rem;
+    
+}
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+
+}
+.quizBtn {
+    width: 13.6rem;
+    height: 13.6rem;
+    margin-top: 10rem;
+    display: flex;
+    
+}
+.pokeBtn {
+    width: 21.5rem;
+    height: 24rem;
+}
+.apocBtn {
+    margin-top: 7rem;
+    margin-left: 4rem;
+}
 /* .pokeBtn::after {
  padding: 16px 20px;
  font-size: 18px;

@@ -7,3 +7,4 @@ import { initQuiz } from "./Pages/Games/Quiz/quiz";
 navBar();
 
 initLoginPage();
+/* initPokedex(); */

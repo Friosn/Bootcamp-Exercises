@@ -14,9 +14,11 @@ export const initPokedex = () => {
   const insertIMG = document.createElement("img");
   insertIMG.src = "https://avatars.githubusercontent.com/u/64151210?v=4";
   getHeader.appendChild(insertIMG);
-  const divForInput = document.createElement("div");
-  getHeader.appendChild(divForInput);
+
   // -----------SEARCHER------------------
+  const getMain = document.querySelector("main");
+  const divForInput = document.createElement("div");
+  getMain.appendChild(divForInput);
   const searcherInput = document.createElement("input");
   searcherInput.classList.add(".myInput");
   searcherInput.setAttribute("placeholder", "SEARCH POKEMON");

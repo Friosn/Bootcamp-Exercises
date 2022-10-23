@@ -1,6 +1,8 @@
 import "./style.css";
 import { clean } from "../../../utils/cleaner";
 import { gameOver } from "../../../components/GameOver/gameOver";
+import { playAudio } from "../../../components/Audioplay/playAudio";
+import { retryBtn } from "../../../components/GameOver/gameOver";
 
 const quiz = [
   {
@@ -62,25 +64,27 @@ const quiz = [
 ];
 
 const mainApp = document.querySelector("#app");
+const mainDiv = document.createElement("div");
+mainDiv.classList.add("mainDiv");
+mainApp.appendChild(mainDiv);
 let score = 0;
 let pos = 0;
 
 export const initQuiz = () => {
+  playAudio("https://millionaire-school.netlify.app/sounds/easy.mp3");
   clean();
   firstProve();
-  const getHeader = document.querySelector("header");
-  const scoreDiv = document.createElement("div");
-  scoreDiv.classList.add("quizDivHeader");
-  getHeader.appendChild(scoreDiv);
 };
-
-const getDivAgain = document.querySelector(".quizDivHeader");
-getDivAgain.innerHTML = `SCORE : ${score}`;
 
 const firstProve = () => {
   clean();
+  /*  const scoreDiv = document.createElement("div");
+  scoreDiv.classList.add("quizDivApp");
+  scoreDiv.innerHTML = `YOUR SCORE : ${score}`; */
+  mainApp.insertAdjacentHTML("beforeend", `<h2>YOUR SCORE : ${score}</h2>`);
+
   const quest = quiz[pos];
-  mainApp.innerHTML = `
+  mainApp.innerHTML += `
        <h2>${quest.question}</h2>
        
        <p><input type="checkbox" class="answer" id="a"><label for="a">${quest.answer.a}</label></p>
@@ -89,7 +93,7 @@ const firstProve = () => {
        `;
 
   const submitBtn = document.createElement("button");
-  submitBtn.innerText = "SUBMIT if you dear";
+  submitBtn.innerText = "SUBMIT";
   mainApp.appendChild(submitBtn);
 
   submitBtn.addEventListener("click", () => {
@@ -106,12 +110,25 @@ const firstProve = () => {
     }
 
     if (rightAnswer === quest.correctAnswer) {
+      playAudio(
+        "https://millionaire-school.netlify.com/sounds/correct_answer.mp3"
+      );
       score++;
-      scoreDiv.innerHTML = `SCORE : ${score}`;
       pos++;
-
-      firstProve();
+      if (score === 6) {
+        clean();
+        mainApp.insertAdjacentHTML(
+          "afterend",
+          `<h1>NEOLANDER FOR THE WIN!!</h1>`
+        );
+        retryBtn();
+      } else {
+        firstProve();
+      }
     } else {
+      playAudio(
+        "https://millionaire-school.netlify.app/sounds/wrong_answer.mp3"
+      );
       gameOver();
     }
   });

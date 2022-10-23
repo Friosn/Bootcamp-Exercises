@@ -67,15 +67,19 @@ p {
     height: 22rem;
     text-align: center;
 }
+.pokeCard > h2 {
+  background-color: white;
+}
 .pokeCard {
   width: 14rem;
   height: 22rem;
-  background: rgb(104, 104, 103);
+  background-color: rgb(0, 0, 0);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 20px;
   text-transform: capitalize;
   
 }
+
 .pokeCard > img {
     justify-content: center;
    text-align: center;
@@ -111,7 +115,7 @@ p {
     background: rgb(255, 255, 255);
     border: 2px solid rgb(200, 200, 200);
     border-radius: 20px;
-    background-color: #5dbde6;
+    background-color: #e0e6e9;
     transition: all .5s ease-in-out;
   }
   .pokeCard:hover::after{
@@ -130,34 +134,52 @@ p {
     border-radius: 20px;
   }
   
-  .grass {
-    background-color: rgba(100, 218, 100, 0.714);
-  }
-
-  .electric {
-    background-color: rgb(222, 222, 62);
-  }
-
-  .normal {
-    background-color: #959595;
-  }
-
-  .bug {
-    background-color: rgb(123, 247, 56);
-  }
-  .water {
-    background-color: aqua;
-  }
-
-  .poison {
-    background-color: rgb(199, 79, 199);
-  }
-
-  .fire {
-    background-color: rgb(246, 83, 83);
-  }
-
-  .rock {
-    background-color: #959595;
+  .grass:hover {
+    background-color: #9ced65;
   }
  
+  .electric:hover {
+    background-color: #eeec79;
+  }
+
+  .normal:hover {
+    background-color: #ccc9aa;
+  }
+
+  .bug:hover {
+    background-color: #d9fe9e;
+  }
+  .water:hover {
+    background-color: #73c3f1;
+  }
+
+  .poison:hover {
+    background-color: #ca72eb;
+  }
+
+  .fire:hover {
+    background-color: #e77243;
+  }
+
+  .rock:hover {
+    background-color: #959595;
+  }
+.psychic:hover {
+  background-color: #af4b9494 ;
+  background-image: url(http://pm1.narvii.com/7243/19a53b46a48f55a346f130092cb2c8d8fcf88af0r1-642-671v2_hq.jpg);
+  font: white;
+}
+
+ .ghost:hover {
+  background-color: #e5b9ea;
+  }
+
+ .fighting:hover {
+  background-color: #f47570;
+}
+.ground:hover {
+  background-color: rgb(116, 93, 52);
+}
+.fairy:hover {
+  background-color: #eba5c8;
+}
