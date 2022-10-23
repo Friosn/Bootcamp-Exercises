@@ -16,7 +16,7 @@ export const initPokedex = () => {
   getHeader.appendChild(insertIMG);
   const divForInput = document.createElement("div");
   getHeader.appendChild(divForInput);
-
+  // -----------SEARCHER------------------
   const searcherInput = document.createElement("input");
   searcherInput.classList.add(".myInput");
   searcherInput.setAttribute("placeholder", "SEARCH POKEMON");
@@ -83,12 +83,14 @@ const printPokeTemplate = (pokeArray) => {
   }
 };
 
-//----------SEARCHER ---------
+//----------SELECT ---------
 
 ///
 
-const pokeType = () => {
-  if (pokemon) {
-  } else {
-  }
+const selectThis = () => {
+  const select = document.createElement("select");
+  select.classList.add("selector");
+  const pokeType = document.createElement("option");
+  pokeType.value = "Pokemon type";
+  select.add(pokeType);
 };

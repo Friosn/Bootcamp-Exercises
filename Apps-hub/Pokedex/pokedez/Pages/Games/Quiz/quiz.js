@@ -68,12 +68,14 @@ let pos = 0;
 export const initQuiz = () => {
   clean();
   firstProve();
+  const getHeader = document.querySelector("header");
+  const scoreDiv = document.createElement("div");
+  scoreDiv.classList.add("quizDivHeader");
+  getHeader.appendChild(scoreDiv);
 };
 
-const getHeader = document.querySelector("header");
-const scoreDiv = document.createElement("div");
-getHeader.appendChild(scoreDiv);
-scoreDiv.innerHTML = `SCORE : ${score}`;
+const getDivAgain = document.querySelector(".quizDivHeader");
+getDivAgain.innerHTML = `SCORE : ${score}`;
 
 const firstProve = () => {
   clean();
@@ -102,8 +104,6 @@ const firstProve = () => {
     } else if (ccc.checked) {
       rightAnswer = "c";
     }
-    console.log(quest.correctAnswer);
-    console.log(rightAnswer);
 
     if (rightAnswer === quest.correctAnswer) {
       score++;

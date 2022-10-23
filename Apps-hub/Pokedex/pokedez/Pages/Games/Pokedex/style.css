@@ -130,3 +130,34 @@ p {
     border-radius: 20px;
   }
   
+  .grass {
+    background-color: rgba(100, 218, 100, 0.714);
+  }
+
+  .electric {
+    background-color: rgb(222, 222, 62);
+  }
+
+  .normal {
+    background-color: #959595;
+  }
+
+  .bug {
+    background-color: rgb(123, 247, 56);
+  }
+  .water {
+    background-color: aqua;
+  }
+
+  .poison {
+    background-color: rgb(199, 79, 199);
+  }
+
+  .fire {
+    background-color: rgb(246, 83, 83);
+  }
+
+  .rock {
+    background-color: #959595;
+  }
+ 
