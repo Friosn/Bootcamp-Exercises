@@ -2,13 +2,14 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App';
+import NotFound from './pages/404';
+import About from './pages/About';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
-import About from './pages/About';
-import NotFound from './pages/404';
+import Series from './pages/Series';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
