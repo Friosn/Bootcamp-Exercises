@@ -63,10 +63,6 @@ const quiz = [
   },
 ];
 
-const mainApp = document.querySelector("#app");
-const mainDiv = document.createElement("div");
-mainDiv.classList.add("mainDiv");
-mainApp.appendChild(mainDiv);
 let score = 0;
 let pos = 0;
 
@@ -78,13 +74,18 @@ export const initQuiz = () => {
 
 const firstProve = () => {
   clean();
-  /*  const scoreDiv = document.createElement("div");
-  scoreDiv.classList.add("quizDivApp");
-  scoreDiv.innerHTML = `YOUR SCORE : ${score}`; */
-  mainApp.insertAdjacentHTML("beforeend", `<h2>YOUR SCORE : ${score}</h2>`);
+  const mainApp = document.querySelector("#app");
+  mainApp.insertAdjacentHTML(
+    "beforeend",
+    `<h2 class="score">YOUR SCORE : ${score}</h2>`
+  );
+
+  const mainDiv = document.createElement("div");
+  mainDiv.classList.add("mainDiv");
+  mainApp.appendChild(mainDiv);
 
   const quest = quiz[pos];
-  mainApp.innerHTML += `
+  mainDiv.innerHTML += `
        <h2>${quest.question}</h2>
        
        <p><input type="checkbox" class="answer" id="a"><label for="a">${quest.answer.a}</label></p>
@@ -93,8 +94,9 @@ const firstProve = () => {
        `;
 
   const submitBtn = document.createElement("button");
+  submitBtn.classList.add("submit");
   submitBtn.innerText = "SUBMIT";
-  mainApp.appendChild(submitBtn);
+  mainDiv.appendChild(submitBtn);
 
   submitBtn.addEventListener("click", () => {
     let rightAnswer = "";
@@ -119,7 +121,7 @@ const firstProve = () => {
         clean();
         mainApp.insertAdjacentHTML(
           "afterend",
-          `<h1>NEOLANDER FOR THE WIN!!</h1>`
+          `<h1 class="wonQuiz">NEOLANDER FOR THE WIN!!🤘</h1>`
         );
         retryBtn();
       } else {
@@ -133,3 +135,15 @@ const firstProve = () => {
     }
   });
 };
+
+/*    const stopAudio = () => {
+        const audio = document.createElement("audio");
+        audio.src = "https://millionaire-school.netlify.app/sounds/easy.mp3";
+        const stop = () => {
+          audio.pause();
+          audio.currentTime = 0;
+          audio.src = audio.src;
+        };
+        stop();
+      };
+      stopAudio(); */

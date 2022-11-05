@@ -18,11 +18,12 @@ export const initPokedex = () => {
   // -----------SEARCHER------------------
   const getMain = document.querySelector("main");
   const divForInput = document.createElement("div");
-  getMain.appendChild(divForInput);
+  divForInput.classList.add("toTop");
   const searcherInput = document.createElement("input");
   searcherInput.classList.add(".myInput");
   searcherInput.setAttribute("placeholder", "SEARCH POKEMON");
   divForInput.appendChild(searcherInput);
+  getMain.appendChild(divForInput);
 
   const printPokemon = (word) => {
     const filteredPokemons = pokeMapArray.filter((pokemon) =>

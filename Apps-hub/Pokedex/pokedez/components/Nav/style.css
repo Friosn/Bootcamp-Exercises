@@ -1,3 +1,21 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-hub {
+    width:50px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+  
+    position: absolute;
+    left: 30px;
+    
+
+}
 
 button > .btn-color {
     --border-radius: 15px;
@@ -12,6 +30,7 @@ button > .btn-color {
     font-weight: 500;
     color: #fff;
     z-index: 2;
+    
    }
    
    button > .btn-color::after {
@@ -38,10 +57,6 @@ button > .btn-color {
     mask-image: var(--m-i), var(--m-i);
     -webkit-mask-origin: var(--m-o);
     mask-origin: var(--m-o);
-    -webkit-mask-clip: var(--m-o);
-    mask-composite: exclude;
-    -webkit-mask-composite: destination-out;
-    filter: hue-rotate(0);
     animation: rotate-hue linear 500ms infinite;
     animation-play-state: paused;
    }

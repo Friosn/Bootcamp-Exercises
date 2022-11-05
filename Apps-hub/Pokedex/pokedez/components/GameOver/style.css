@@ -1,0 +1,28 @@
+ .gameOver {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px double black;
+
+ }
+
+ .gameOver {
+  margin: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+  padding: 2rem;
+  width: 50%;
+ }
+
+ .retryBtn {
+  margin: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin:0% 50%
+ }

@@ -27,9 +27,9 @@ p {
 .pokeHeader {
   display: flex;
   justify-content: center;
-  height: 27.5rem;
+  height: fit-content;
  align-items: flex-end;
-  background-image: url(http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/548f2eab06f447e.png);
+  
   flex-wrap: wrap;
   border-top-right-radius: 40%;
   border-top-left-radius: 40%;
@@ -42,29 +42,30 @@ p {
  
   justify-content:initial;
   display: flex;
-  background-color: rgba(182, 35, 35, 0.119);
+  background-color: rgba(231, 33, 33, 0.836);
 
   flex-wrap: wrap;
   align-items:center;
   border-radius: 50%;
 }
 
-.pokeHeader > input {
+.myInput {
   height: 1.5rem;
   width: 13rem;
   border: 2px solid black;
   
 }
-
+.toTop {
+  position: fixed;
+}
 .pokeCard {
     justify-content: space-between;
     align-content: space-around;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 2.4rem;
-    width: 14rem;
-    height: 22rem;
+    margin: 1.5rem;
+   
     text-align: center;
 }
 .pokeCard > h2 {
@@ -94,10 +95,13 @@ p {
 
 
 .myInput {
-    text-align: end;
+    text-align: start;
 }
 
-
+main > div > input {
+  position: fixed;
+  top: 20;
+}
 
   .pokeCard > h2{
     background-color: rgba(0, 0, 0, 0.144);
@@ -182,4 +186,8 @@ p {
 }
 .fairy:hover {
   background-color: #eba5c8;
+}
+
+.dragon:hover {
+  background-color: #6f8fafa6;
 }

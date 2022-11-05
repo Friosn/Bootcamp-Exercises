@@ -1,7 +1,11 @@
 import { initQuiz } from "../../Pages/Games/Quiz/quiz";
 import { clean } from "../../utils/cleaner";
+import "./style.css";
 
 const mainApp = document.querySelector("#app");
+const mainDiv = document.createElement("div");
+mainDiv.classList.add("mainDiv");
+mainApp.appendChild(mainDiv);
 
 export const retryBtn = () => {
   const retrBtn = document.createElement("button");
@@ -14,8 +18,7 @@ export const retryBtn = () => {
 export const gameOver = () => {
   clean();
   mainApp.innerHTML = `
-    <h1>GAME OVER</h1>   
-    <p>Sometimes shit happens, mate</p>
+    <h1 class="gameOver">GAME OVER</h1>   
     `;
   retryBtn();
 };

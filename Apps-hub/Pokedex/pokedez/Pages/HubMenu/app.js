@@ -3,7 +3,7 @@ import { initPokedex } from "../Games/Pokedex/app";
 import { initQuiz } from "../Games/Quiz/quiz";
 import "./style.css";
 
-export const hubSite = (val) => {
+export const hubSite = () => {
   clean();
   const innerStuff = document.querySelector("#app");
   const pokedexDiv = document.createElement("div");
@@ -33,7 +33,4 @@ export const hubSite = (val) => {
   pokedexImg.addEventListener("click", () => initPokedex());
   wakaMoleBtn.addEventListener("click", () => alert("Maintenance time 🧹🧹"));
   quizImg.addEventListener("click", () => initQuiz());
-
-  const getBody = document.querySelector("body");
-  getBody.classList.add("hubBody");
 };

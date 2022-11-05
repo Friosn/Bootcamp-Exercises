@@ -1,0 +1,32 @@
+
+
+div > .container {
+    display: flex;
+    margin: auto;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+   
+    flex-direction: column;
+    border: 4px double black;
+    border-radius: 20%;
+
+    
+}
+
+.title{
+    margin: 40px;
+    margin-top: 70px;
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: underline;
+
+}
+
+#identificator {
+    margin: 10px;
+}
+
+.btn-login {
+    margin-bottom: 20px;
+}
