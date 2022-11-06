@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import MyMainStyled from './ui/MainStyled';
 
 const App = () => {
   return (
@@ -13,9 +14,9 @@ const App = () => {
       <header>
         <h1>I am gonna put movies and series all around 🎥🎞️📽️🎬🎦</h1>
       </header>
-      <main>
+      <MyMainStyled>
         <Outlet />
-      </main>
+      </MyMainStyled>
       <footer>
         <Footer />
       </footer>

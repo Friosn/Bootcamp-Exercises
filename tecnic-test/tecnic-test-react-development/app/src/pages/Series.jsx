@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CardStyled from '../ui/CardStyled';
 
 const Series = () => {
   const [serieList, setSerieList] = useState([]);
@@ -25,20 +26,19 @@ const Series = () => {
   console.log(serieType);
 
   return (
-    <div>
+    <>
       {serieType.length &&
         serieType.map((serie) => (
-          <div key={serie.title}>
-            <h3>{serie.title}</h3>
+          <CardStyled key={serie.title}>
             <img
               src={serie.images['Poster Art'].url}
               alt={serie.title}
-              width="1000"
-              height="1500"
+              width="220"
+              height="320"
             />
-          </div>
+          </CardStyled>
         ))}
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CardStyled from '../ui/CardStyled';
 
 const Movies = () => {
   const [movieList, setMovieList] = useState([]);
@@ -29,15 +30,17 @@ const Movies = () => {
 
   return (
     <>
-      <div className="movieGallery">
-        {movieType.length &&
-          movieType.map((movie) => (
-            <div key={movie.title}>
-              <h3>{movie.title}</h3>
-              <img src={movie.images['Poster Art'].url} alt={movie.title} />
-            </div>
-          ))}
-      </div>
+      {movieType.length &&
+        movieType.map((movie) => (
+          <CardStyled key={movie.title}>
+            <img
+              src={movie.images['Poster Art'].url}
+              alt={movie.title}
+              height="320"
+              width="220"
+            />
+          </CardStyled>
+        ))}
     </>
   );
 };
