@@ -8,9 +8,9 @@ const CardStyled = styled.div`
   justify-content: space-around;
   align-content: center;
   box-sizing: content-box;
-  border: 2px solid black;
-  filter: opacity(65%);
-
+  border: 2px solid;
+  filter: opacity(70%);
+  z-index: 5;
   :hover {
     transition: 1s ease-in-out;
     filter: opacity(110%);
