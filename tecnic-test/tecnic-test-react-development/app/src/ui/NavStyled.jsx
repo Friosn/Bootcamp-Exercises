@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 const NavStyled = styled.nav`
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     0deg,

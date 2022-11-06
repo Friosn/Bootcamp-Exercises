@@ -7,22 +7,34 @@ import TextComponent from '../ui/TexStyled';
 const NavBar = () => {
   return (
     <NavStyled>
-      <ul>
-        <li>
-          <NavLink to="">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="movies">
-            <TextComponent color="white">Movies</TextComponent>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="series">Series</NavLink>
-        </li>
-        <li>
-          <NavLink to="about">About</NavLink>
-        </li>
-      </ul>
+      <NavLink to="">
+        <h2>
+          <TextComponent color="white">DEMO Streaming</TextComponent>
+        </h2>
+      </NavLink>
+
+      <div className="center">
+        <NavLink to="movies">
+          <TextComponent color="white">Movies</TextComponent>
+        </NavLink>
+      </div>
+      <div className="center">
+        <NavLink to="series">
+          <TextComponent color="white">Series</TextComponent>
+        </NavLink>
+      </div>
+      <div className="right">
+        <a>
+          <TextComponent color="white">Log in</TextComponent>
+        </a>
+      </div>
+      <div className="right">
+        <button>
+          <TextComponent color="white" backgroundColor="#414141">
+            Start your free trial
+          </TextComponent>
+        </button>
+      </div>
     </NavStyled>
   );
 };

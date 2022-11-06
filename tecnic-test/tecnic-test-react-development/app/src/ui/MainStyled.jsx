@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const MyMainStyled = styled.main`
-  margin: 20px 0px;
-
+  margin: 0px;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

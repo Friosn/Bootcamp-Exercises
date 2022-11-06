@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CardStyled = styled.div`
-  margin: 10px 12px;
+  margin: 28px 12px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
