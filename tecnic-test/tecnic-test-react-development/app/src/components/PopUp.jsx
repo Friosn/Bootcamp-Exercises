@@ -1,16 +1,28 @@
-/* import React from 'react';
-import { useState } from 'react';
+import React from 'react';
+import PopUp from 'reactjs-popup';
 
-const PopUp = ({open}) => {
-  const [showModan, setShowModal] = useState(false);
+import PopUpStyled from '../ui/PopUpStyle';
+import CardDetail from './CardDetail';
 
-  if(open!) {
-    return null;
-  }
+const PopUpCard = ({ title, description, releaseYear, image }) => {
   return (
-  <div className='modalContainer'>
-
-  </div>;
+    <PopUp trigger={<p>{title}</p>} modal nested>
+      {(close) => (
+        <PopUpStyled>
+          <button className="closeDiv" onClick={close}>
+            <strong>X</strong>
+          </button>
+          <div className="contentPop">
+            <CardDetail
+              title={title}
+              description={description}
+              releaseYear={releaseYear}
+              image={image}
+            />
+          </div>
+        </PopUpStyled>
+      )}
+    </PopUp>
+  );
 };
-
-export default PopUp; */
+export default PopUpCard;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import PopUpCard from '../components/PopUp';
 import CardStyled from '../ui/CardStyled';
 
 const Movies = () => {
@@ -39,6 +40,11 @@ const Movies = () => {
               alt={movie.title}
               height="320"
               width="220"
+            />
+            <PopUpCard
+              title={movie.title}
+              description={movie.description}
+              image={movie.images['Poster Art'].url}
             />
           </CardStyled>
         ))}
